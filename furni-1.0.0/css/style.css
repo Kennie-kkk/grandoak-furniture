@@ -168,7 +168,7 @@ a {
   .hero p {
     color: rgba(255, 255, 255, 0.5);
     margin-bottom: 30px; }
-  .hero .hero-img-wrap {
+  /*.hero .hero-img-wrap {
     position: absolute; }
     .hero .hero-img-wrap img {
       position: absolute;
@@ -176,17 +176,51 @@ a {
       right: 0px;
       z-index: 2;
       max-width: 780px;
-      left: -20px; }
+      left: -20px; }*/
+.hero .hero-img-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.hero .hero-img-wrap img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 780px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+/* Prevent overflow on all screen sizes */
+@media (min-width: 992px) {
+  .hero .hero-img-wrap {
+    max-height: 600px;
+  }
+  .hero .hero-img-wrap img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.hero .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
       @media (min-width: 768px) {
         .hero .hero-img-wrap img {
           right: 0px;
           left: -100px; } }
-      @media (min-width: 992px) {
+     /* @media (min-width: 992px) {
         .hero .hero-img-wrap img {
           left: 0px;
           top: -80px;
           position: absolute;
-          right: -50px; } }
+          right: -50px; } }*/
       @media (min-width: 1200px) {
         .hero .hero-img-wrap img {
           left: 0px;
